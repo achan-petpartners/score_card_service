@@ -37,6 +37,7 @@ defmodule ScoreCardService.GitHub.HTTPClient do
   end
 
   defp get_header(headers, key) do
+    IO.inspect headers
     headers
     |> Enum.filter(fn({k, _}) -> k == key end)
     |> List.first
@@ -46,9 +47,10 @@ defmodule ScoreCardService.GitHub.HTTPClient do
   defp get_link_value(link_value), do: elem(link_value, 1)
 
   defp get_next_link(nil), do: nil
-  defp get_next_link(headers) do
-      link_header = get_header(headers, "Link")
-      get_next_link(link_header)
+  defp get_next_link(headers)
+      when is_list(headers) do
+        link_header = get_header(headers, "Link")
+        get_next_link(link_header)
   end
   defp get_next_link(link_header), do: ExLinkHeader.parse!(link_header).next
 end
