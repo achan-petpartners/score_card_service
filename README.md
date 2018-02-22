@@ -18,16 +18,16 @@ Usage of this service:
   Two endpoints are provided to query scorecard for a given user.  
   
   * http://localhost:4000/api/scorecards/:user/
-    * Example: http://localhost:4000/api/scorecards/achan-petpartners/
+    * Example: http://localhost:4000/api/scorecards/wlchanada/
     * This returns the total score for a given user.
     
   * http://localhost:4000/api/scorecards/:user/:event_type
-    * Example http://localhost:4000/api/scorecards/achan-petpartners/PushEvent
+    * Example http://localhost:4000/api/scorecards/wlchanada/PushEvent
     * This returns the total score for a given user and event type.
   
   * To query them, 
-    * curl http://localhost:4000/api/scorecards/achan-petpartners/
-    * curl http://localhost:4000/api/scorecards/achan-petpartners/PushEvent
+    * curl http://localhost:4000/api/scorecards/wlchanada/
+    * curl http://localhost:4000/api/scorecards/wlchanada/PushEvent
     
 Field Definition:
   * scorecard - scorecard starting from this field 
