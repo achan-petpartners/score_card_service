@@ -2,6 +2,9 @@
 
 This service requires Elixir 1.5 and Phoenix 1.3 or higher 
 
+Dependencies:
+  * Postgresql 9.6.3 or higher is required to be installed and running on the same host that you will run this service.  Otherwise change the hostname to where postgres is running.
+
 To test Score Card Server:
   * Install dependencies with `mix deps.get`
   * Run test with `mix test`
